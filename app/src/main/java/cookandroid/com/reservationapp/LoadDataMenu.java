@@ -19,7 +19,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import cookandroid.com.reservationapp.activity.OrderActivity;
+import cookandroid.com.reservationapp.activity.CoffeeOrderActivity;
+import cookandroid.com.reservationapp.activity.DessertOrderActivity;
 import cookandroid.com.reservationapp.adapter.MenuAdapter;
 import cookandroid.com.reservationapp.model.MenuItem;
 
@@ -61,12 +62,13 @@ public class LoadDataMenu extends AppCompatActivity {
                                 menuList.add(new MenuItem(
                                         menu.getString("foodImage"),
                                         menu.getString("foodName"),
-                                        menu.getString("foodPrice")
+                                        menu.getString("foodPrice"),
+                                        menu.getString("foodType")
                                 ));
 
                             }
 
-                            //creating adapter object and setting it to recyclerview
+                            // 어댑터 객체를 생성하고 이를 리사이클러뷰에 set한다.
                             adapter = new MenuAdapter(context, menuList);
                             recyclerView.setAdapter(adapter);
 
@@ -76,9 +78,18 @@ public class LoadDataMenu extends AppCompatActivity {
                                 public void onItemClick(MenuAdapter.ViewHolder holder, View view, int position) {
                                     MenuItem item = adapter.getItem(position);
 
-                                    Intent intent = new Intent(context, OrderActivity.class);
-                                    intent.putExtra("menu", item);
-                                    context.startActivity(intent);
+                                    //
+                                    if(item.getType().equals("커피")) {
+                                        Intent intent = new Intent(context, CoffeeOrderActivity.class);
+                                        intent.putExtra("menu", item);
+                                        context.startActivity(intent);
+
+                                    } else if(item.getType().equals("디저트")) {
+                                        Intent intent = new Intent(context, DessertOrderActivity.class);
+                                        intent.putExtra("menu", item);
+                                        context.startActivity(intent);
+
+                                    }
 
                                 }
                             });
@@ -95,7 +106,7 @@ public class LoadDataMenu extends AppCompatActivity {
                     }
                 });
 
-        //adding our stringrequest to queue
+
         Volley.newRequestQueue(context).add(stringRequest);
 
 

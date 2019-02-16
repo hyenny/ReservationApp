@@ -18,11 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.MenuActivity" />
-        <activity android:name=".activity.OrderActivity"></activity>
+        <activity android:name=".activity.CoffeeOrderActivity" />
+        <activity android:name=".activity.ReservationActivity" />
+        <activity android:name=".activity.DessertOrderActivity"></activity>
     </application>
 
 </manifest>

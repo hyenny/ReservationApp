@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_margin="20dp"
     android:orientation="vertical"
-    tools:context=".activity.OrderActivity">
+    tools:context=".activity.CoffeeOrderActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,12 +54,14 @@
                 android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/minusButton"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="#FFFFFF"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
 
                 <TextView
+                    android:id="@+id/orderNum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
@@ -67,6 +69,7 @@
                     android:layout_margin="10dp"/>
 
                 <ImageButton
+                    android:id="@+id/plusButton"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="#FFFFFF"
@@ -107,5 +110,74 @@
 
         </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:gravity="left"
+            android:text="사이즈"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/sizeGroup"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/tallSize"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Tall"
+                android:textSize="15dp" />
+
+            <RadioButton
+                android:id="@+id/grandeSize"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="Grande"
+                android:textSize="15dp" />
+        </RadioGroup>
+
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/c_orderButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="주문하기"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        android:layout_margin="10dp"
+        android:textSize="15dp"/>
+
+    <Button
+        android:id="@+id/c_putButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="담기"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="10dp"
+        android:textSize="15dp"/>
+
+
+
+</LinearLayout>

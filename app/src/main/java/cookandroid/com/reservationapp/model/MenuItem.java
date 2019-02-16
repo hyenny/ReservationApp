@@ -5,17 +5,22 @@ import java.io.Serializable;
 
 public class MenuItem implements Serializable {
 
-    String img;
-    String name;
-    String price;
+    private String img;
+    private String name;
+    private String price;
+    private String type;
 
-    public MenuItem(String img, String name, String price) {
+    public MenuItem(String img, String name, String price, String type) {
         this.img = img;
         this.name = name;
         this.price = price;
+        this.type = type;
     }
 
-    public String getImg() { return img; }
+
+    public String getImg() {
+        return img;
+    }
 
     public void setImg(String img) {
         this.img = img;
@@ -36,4 +41,16 @@ public class MenuItem implements Serializable {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
+
+
 }
