@@ -16,8 +16,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONObject;
 
 import cookandroid.com.reservationapp.R;
-import cookandroid.com.reservationapp.RegisterRequest;
-import cookandroid.com.reservationapp.ValidateRequest;
+import cookandroid.com.reservationapp.data.RegisterRequest;
+import cookandroid.com.reservationapp.data.ValidateRequest;
 
 //회원가입
 

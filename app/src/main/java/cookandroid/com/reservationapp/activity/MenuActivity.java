@@ -9,12 +9,8 @@ import android.view.Menu;
 import android.widget.TabHost;
 import android.widget.Toast;
 
-import java.util.List;
-
-import cookandroid.com.reservationapp.LoadDataMenu;
+import cookandroid.com.reservationapp.data.LoadDataMenu;
 import cookandroid.com.reservationapp.R;
-import cookandroid.com.reservationapp.adapter.MenuAdapter;
-import cookandroid.com.reservationapp.model.MenuItem;
 
 public class MenuActivity extends AppCompatActivity {
     private static final String URL_MENU_ALL = "http://simssbook9.cafe24.com/FoodList.php";

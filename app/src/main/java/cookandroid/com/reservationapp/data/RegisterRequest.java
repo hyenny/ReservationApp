@@ -1,4 +1,4 @@
-package cookandroid.com.reservationapp;
+package cookandroid.com.reservationapp.data;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;

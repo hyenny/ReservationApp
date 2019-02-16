@@ -1,4 +1,4 @@
-package cookandroid.com.reservationapp;
+package cookandroid.com.reservationapp.data;
 
 import android.content.Context;
 import android.content.Intent;

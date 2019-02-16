@@ -17,7 +17,7 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
 
-import cookandroid.com.reservationapp.LoginRequest;
+import cookandroid.com.reservationapp.data.LoginRequest;
 import cookandroid.com.reservationapp.R;
 
 public class LoginActivity extends AppCompatActivity {
